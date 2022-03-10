@@ -46,15 +46,15 @@ public class Catalog {
         printCatalog(catalog);
         System.out.println("_________________________");
         // Sort by Price
-        Collections.sort(catalog , PriceComparator.priceComparator);
+        Collections.sort(catalog , new PriceComparator());
         printCatalog(catalog);
         System.out.println("_________________________");
         // Sort by Name asc
-        Collections.sort(catalog , NameComparator.nameComparator);
+        Collections.sort(catalog , new NameComparator());
         printCatalog(catalog);
         System.out.println("_________________________");
         // Sort by Category length
-        Collections.sort(catalog , CategoryComparator.categoryComparator);
+        Collections.sort(catalog , new CategoryComparator());
         printCatalog(catalog);
 
         // Unterschied zwischen Comparable und Comparator:
