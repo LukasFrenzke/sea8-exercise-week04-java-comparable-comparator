@@ -49,11 +49,11 @@ public class Catalog {
         Collections.sort(catalog , PriceComparator.priceComparator);
         printCatalog(catalog);
         System.out.println("_________________________");
-        // Sort by Name
+        // Sort by Name asc
         Collections.sort(catalog , NameComparator.nameComparator);
         printCatalog(catalog);
         System.out.println("_________________________");
-        // Sort by Category
+        // Sort by Category length
         Collections.sort(catalog , CategoryComparator.categoryComparator);
         printCatalog(catalog);
 

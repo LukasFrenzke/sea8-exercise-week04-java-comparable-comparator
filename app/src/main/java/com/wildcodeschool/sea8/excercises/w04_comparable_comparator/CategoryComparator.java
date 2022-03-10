@@ -6,13 +6,17 @@ public class CategoryComparator implements Comparator<CatalogItem>{
     static Comparator<CatalogItem> categoryComparator = new Comparator<CatalogItem>() {
         @Override
         public int compare(CatalogItem o1, CatalogItem o2) {
-            return(o1.getCategory().compareTo(o2.getCategory()));
+            if (o1.getCategory().length() > o2.getCategory().length()) return 1;
+            if (o1.getCategory().length() < o2.getCategory().length()) return -1;
+            else return 0;
         }
     };
 
     @Override
     public int compare(CatalogItem o1, CatalogItem o2) {
-        return(o1.getCategory().compareTo(o2.getCategory()));
+        if (o1.getCategory().length() > o2.getCategory().length()) return 1;
+        if (o1.getCategory().length() < o2.getCategory().length()) return -1;
+        else return 0;
     }
 
     
