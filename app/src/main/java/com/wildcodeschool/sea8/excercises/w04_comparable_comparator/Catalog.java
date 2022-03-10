@@ -39,11 +39,28 @@ public class Catalog {
 
         // Next we have a look at the data.
         printCatalog(catalog);
-
+        System.out.println("_________________________");
         // TASK AREA START
+        // Sort by ID
+        Collections.sort(catalog);
+        printCatalog(catalog);
+        System.out.println("_________________________");
+        // Sort by Price
+        Collections.sort(catalog , PriceComparator.priceComparator);
+        printCatalog(catalog);
+        System.out.println("_________________________");
+        // Sort by Name
+        Collections.sort(catalog , NameComparator.nameComparator);
+        printCatalog(catalog);
+        System.out.println("_________________________");
+        // Sort by Category
+        Collections.sort(catalog , CategoryComparator.categoryComparator);
+        printCatalog(catalog);
 
-
-
+        // Unterschied zwischen Comparable und Comparator:
+        // Mit Comparable lässt sich relativ simpel eine einheitliche Sortierlogik implementieren. z.B. können dann alle Listen nach ID, Name, Preis etc sortiert werden.
+        // Mit Comparator kann man Individuallogiken implementieren. Das ist hilfreich, wenn man z.B. eine Liste nach Namen und die andere Liste nach Preisen sortieren möchte.
+        // Hier ist dann keine einheitliche Lösung notwendig, sondern eine Logik für jede Liste. Dank der verschiedenen Comparator die man erstellen kann, kann so die Sort-Methode mit der Liste und der gewünschten Sortierung ausgeführt werden.
         // TASK ARE END
     }
 
